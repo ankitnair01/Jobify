@@ -1,0 +1,68 @@
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .auth-gradient-background {
+    background: linear-gradient(
+      -45deg, 
+      #8B5CF6, 
+      #D946EF, 
+      #6366F1, 
+      #3B82F6
+    );
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    transition: all 0.5s ease;
+  }
+  
+  .auth-form-container {
+    @apply backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl shadow-2xl;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-form-container:hover {
+    @apply scale-105 shadow-2xl;
+  }
+  
+  .auth-input {
+    @apply border-jobify-purple/30 focus:border-jobify-purple focus:ring-2 focus:ring-jobify-purple/50;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-button {
+    @apply transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .auth-toggle-link {
+    @apply text-jobify-purple hover:text-jobify-pink transition-colors duration-300;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .auth-illustration {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .auth-form-container {
+      @apply w-full max-w-md mx-auto;
+    }
+  }
